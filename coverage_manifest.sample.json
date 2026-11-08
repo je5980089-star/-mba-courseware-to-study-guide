@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "course": "示例：人力资源管理（合成演示，不包含任何教师讲义）",
+  "constraints": {
+    "max_pages": 8,
+    "allow_exam_questions": false
+  },
+  "source_units": [
+    {"id": "lecture-a:p58", "status": "reviewed", "signals": ["第1步 岗位价值评价"]},
+    {"id": "lecture-a:p62", "status": "reviewed", "signals": ["第2步 薪酬调查"]},
+    {"id": "lecture-a:p63", "status": "reviewed", "signals": ["第3步 现状分析"]},
+    {"id": "lecture-a:p64", "status": "reviewed", "signals": ["第4步 薪酬战略"]},
+    {"id": "lecture-a:p69", "status": "reviewed", "signals": ["第5步 薪酬结构"]},
+    {"id": "lecture-a:p70", "status": "reviewed", "signals": ["第6步 薪酬构成"]}
+  ],
+  "flow_decisions": [
+    {"candidate_id": "flow-1", "decision": "composite", "composite_id": "t3"}
+  ],
+  "topics": [
+    {"id": "t1", "title": "岗位价值评价", "type": "concept", "required": true, "aliases": ["岗位价值评价", "岗位评价"], "min_chars": 100, "source_refs": ["lecture-a:p58"]},
+    {"id": "t2", "title": "薪酬调查", "type": "concept", "required": true, "aliases": ["薪酬调查", "薪资调查"], "min_chars": 100, "source_refs": ["lecture-a:p62"]},
+    {"id": "t3", "title": "薪酬体系设计", "type": "composite", "required": true, "aliases": ["薪酬体系设计"], "min_chars": 500, "source_refs": ["lecture-a:p58", "lecture-a:p62", "lecture-a:p63", "lecture-a:p64", "lecture-a:p69", "lecture-a:p70"]}
+  ],
+  "composites": [
+    {
+      "id": "t3",
+      "title": "薪酬体系设计",
+      "must_have_dedicated_heading": true,
+      "steps": ["岗位价值评价", "薪酬调查", "薪酬现状分析", "薪酬战略", "薪酬结构", "薪酬构成"],
+      "min_chars": 500,
+      "min_chars_per_step": 25
+    }
+  ]
+}

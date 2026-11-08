@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+/tmp/
+/output/
+/student-uploads/
+*.pdf
+*.pptx
+*.docx
+!examples/*.docx
